@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box {
+            /* border: 1px solid black; */
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 10vh auto;
+            border-radius: 50%;
+            transition: transform 3s ease-in-out, box-shadow 3s ease, background-color 4s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scale(1.5);
+            box-shadow: 0px 0px 500px red;
+            background-color: rgb(17, 11, 11);
+
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: myAnimation 6s infinite;
+            transition: background-color 2s ease;
+        }
+
+        @keyframes myAnimation {
+            0% {
+                transform: translateX(0);
+            }
+           25% {
+                transform: translateX(1000px) rotate(145deg);
+                background-color: yellow;
+            }
+            
+            75% {
+                transform: translateY(500px);
+                border-radius: 50%;
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <div class="box2">
+
+    </div>
+</body>
+
+</html>

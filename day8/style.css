@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 550;
+    position: sticky;
+    top:10px
+}
+.navList{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.btn{
+    margin-left: 30px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+}
+.links{
+    display: flex;
+    align-items: center;
+    margin-right: 8vw;
+}
+.logo{
+    margin-left: 8vw;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    line-height: 50px;
+    margin-top: 10vh;
+}
+.hero>h1{
+    font-size: 38px;
+}
+.hero>p{
+    color: rgb(72, 70, 70);
+}
+.heroBtn{
+    margin-top: 20px;
+    margin-left: 0px;
+}
+.content{
+    margin-top: 10vh;
+}
+.content1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content1>img{
+    width: 35vw;
+}
+.card{
+    line-height: 40px;
+}
+.contentBtn{
+    margin-left: 0px;
+}
+.card>p{
+color: rgb(92, 90, 90);
+}
+.content1{
+    margin-top: 5vh;
+}
+.headings{
+ padding: 8vw;
+}
+.cards{
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.headingCard{
+    width: 30vw;
+    line-height: 20px;
+    margin-top: 20px;
+}
+.headingCard>h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+.headingCard>p{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(94, 92, 92);
+}
+.foot{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+.footList{
+    list-style: none;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.icons{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+img{
+    transition: transform 1s ease;
+}
+img:hover{
+    transform: scale(1.1);
+}

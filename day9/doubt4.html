@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flexEx {
+            display: flex;
+            /* justify-content: end; */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        .box1 {
+            flex: 1;
+        }
+
+        .box2 {
+            flex: 2;
+        }
+
+        .box3 {
+            flex: 1;
+        }
+
+        .box4 {
+            flex: 1;
+        }
+
+        .gridEx {
+            margin-top: 10vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows:30vh 20vh;
+        }
+
+        .area {
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgb(27, 26, 26);
+            /* display: inline; */
+        }
+        .area{
+            grid-area: 50vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexEx">
+        <div class="box box1">box 1</div>
+        <div class="box box2">box 2</div>
+        <div class="box box3">box 3</div>
+        <div class="box box4">box 4</div>
+    </div>
+    <div class="gridEx">
+        <div class="area area1">area 1 </div>
+        <div class="area area2">area 2</div>
+        <div class="area area3">area 3 </div>
+        <div class="area area4">area 4</div>
+        <div class="area area5">area 4</div>
+        <div class="area area6">area 4</div>
+    </div>
+</body>
+
+</html>

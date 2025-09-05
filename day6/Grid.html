@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: 220px auto auto;
+            grid-template-rows: 200px 200px;
+            gap: 5px;
+            padding: 5px;
+            /* box-sizing: border-box; */
+        }
+        .box1{
+            border: 1px solid blue;
+            /* width: 1200px;
+            background-color: bisque; */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            padding: 10px;
+            width: fit-content;
+        }
+        .box2{
+            border: 1px solid rgb(168, 155, 18);
+        }
+        .box3{
+            border: 1px solid rgb(0, 255, 30);
+        }
+        .box4{
+            border: 1px solid rgb(190, 196, 117);
+        }
+        .box5{
+            border: 1px solid rgb(139, 66, 92);
+        }
+        .box6{
+            border: 1px solid rgb(33, 6, 8);
+        }
+        img{
+            width: 200px;
+            height: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <img src="./image.png" alt="">
+        </div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+    </div>
+</body>
+
+</html>

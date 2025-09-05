@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Student table</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Fees</th>
+                <th>College</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mayur</td>
+                <td>19</td>
+                <td>10K</td>
+                <td rowspan="4">Career247</td>
+            </tr>
+            <tr>
+                <td>Kapil</td>
+                <td>20</td>
+                <td>20K</td>
+            </tr>
+            <tr>
+                <td>Ritvik</td>
+                <td>18</td>
+                <td>15K</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">total fees:</td>
+                <td colspan="2">45K</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

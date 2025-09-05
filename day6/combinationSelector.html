@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* child selector */
+        .container>p{
+            background-color: aquamarine;
+        }
+        /* descendent selector */
+        .container p{
+            color: red;
+        }
+        /* next sibling selector */
+        .para+p{
+            font-size: 26px;
+            font-style: italic;
+        }
+        /* subsequent sibling selector */
+        /* it selects all the siblig after that element */
+        .para1~div{
+            border: 1px solid black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="para1">Hey this is para 1</p>
+        <div class="child">
+            <p>Hey this is para 2</p>
+        </div>
+        <div class="child">
+            <p>hey this is para 3</p>
+        </div>
+        <p class="para">Hey this is para4</p>
+        <p>Hey this is para 5</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.profile{
+    font-size: 1rem;
+    /* font-family: "Source Code Pro", monospace; */
+}
+.shadow{
+    width: 350px;
+    height: 500px;
+    box-shadow: 0px 0px 5px rgb(26, 26, 26), inset 0px 0px 70px 2px rgb(247, 218, 1);
+    margin: 10vh auto;
+    /* background-color: ; */ 
+    border-radius: 10px;
+    transform: rotate(-15deg);
+    position: relative;
+    z-index: 0;
+    transition: transform 3s ease;
+}
+.card{
+    width: 350px;
+    height: 500px;
+    box-shadow: 0px 0px 1px rgb(14, 14, 13), inset 0px 0px 5px lightblue;
+    margin: 10vh auto;
+    border-radius: 10px;
+    /* position: absolute; */
+    position: relative;
+    top: -585px;
+    background-color: rgb(249, 249, 249);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.card>img{
+    border-radius: 50%;
+    margin: 1rem;
+}
+.card>p{
+    color: rgb(10, 10, 10);
+}
+.socialItems{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+    padding: 1rem;
+}
+.icon1{
+    font-size: 2rem;
+    color: rgb(11, 64, 223);
+}
+.icon2{
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+.icon3{
+    font-size: 2rem;
+    color: rgb(200, 6, 200);
+    /* color: linear-gradient(purple,white,red); */
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 350px; */
+    /* overflow: scroll; */
+
+}
+.contactItem{
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+    width: 100%;
+}
+.contactItem>span{
+    margin-right: 10px;
+    font-weight: 600;
+}
+.contactItem>a{
+    text-decoration:none ;
+}
+.title{
+     font-weight: 600;
+}
+.shadow:hover{
+    transform: rotate(-180deg);
+    box-shadow: 0px 0px 7px rgb(26, 26, 26), inset 0px 0px 80px 2px rgb(247, 218, 1);
+}

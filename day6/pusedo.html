@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psuedo classes</title>
+    <style>
+        a:active{
+            color: blue;
+            /* background-color: aquamarine;
+            text-transform: uppercase; */
+        }
+        a:visited{
+            color: black;
+        }
+        a:hover{
+            background-color: aqua;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white ;
+            border-radius:10px ;
+            font-weight: 600;
+            border: 1px solid lightgreen;
+            box-shadow: 0px 0px 5px lightgreen;
+            text-shadow: yellow 0px 0px 1px;
+            color: rgb(14, 79, 101);
+        }
+        button:hover{
+            background-color: black;
+            color: bisque;
+            text-shadow: rgb(211, 218, 211) 0px 0px 10px 30px;
+            font-size: 18px;
+
+        }
+        .box:nth-child(3){
+            background-color: blue;
+        }
+        .box:last-child{
+            color: blueviolet;
+        }
+        .box:first-child{
+            background-color: bisque;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="./Grid.html" target="_blank">check the grid</a>
+    <a href="https://www.facebook.com">facebook</a>
+    <button>Submit</button>
+
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>truck</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .img{
+            width: 200px;
+            animation: truck-move 3s infinite;
+
+        }
+        .road1{
+            /* display: inline; */
+            margin-top: 50vh;
+            border: 10px solid black;
+        }
+        .road2{
+            /* display: inline; */
+            margin-top: -2vh;
+            border: 10px solid black;
+        }
+        @keyframes truck-move{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(1400px);
+            }
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid red;
+            position: absolute;
+            margin-top: -50vh;
+            /* border-radius: 50%; */
+            transition: transform 5s ease;
+        }
+        .box1{
+            margin-left: 100px;
+            background-color: red;
+            animation: drop 2s infinite;
+        }
+        .box2{
+            margin-left: 200px;
+            background-color: rgb(19, 15, 15);
+            animation: drop 3s infinite 1s;
+        }
+        .box3{
+            margin-left: 300px;
+            background-color: rgb(86, 28, 201);
+            animation: drop 4s infinite 2s;
+        }
+        .box4{
+            margin-left: 400px;
+            background-color: rgb(181, 196, 10);
+            animation: drop 5s infinite 3s;
+        }
+        .box5{
+            margin-left: 500px;
+            background-color: rgb(9, 196, 106);
+            animation: drop 1s infinite 4s;
+        }
+        @keyframes drop{
+            0%{
+                transform: translateY(0);
+            }
+            25%{
+                transform: translateX(55vw) rotate(180deg);
+            }
+            100%{
+                transform: translateY(55vh) rotate(180deg);
+            }
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box1 box"></div>
+    <div class="box2 box"></div>
+    <div class="box3 box"></div>
+    <div class="box4 box"></div>
+    <div class="box5 box"></div>
+    <div class="road1"></div>
+    <img src="https://media1.tenor.com/m/priwctQfBukAAAAd/truck.gif" alt="gif" class="img">
+    <div class="road2"></div>
+</body>
+</html>
