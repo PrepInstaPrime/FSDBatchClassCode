@@ -24,7 +24,7 @@
     color: white;
     padding: 8px 20px;
     border-radius: 10px;
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out; 
 }
 .links{
     display: flex;
@@ -81,8 +81,8 @@ color: rgb(92, 90, 90);
 .cards{
     margin-top: 5vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }
 .headingCard{
     width: 30vw;
@@ -120,7 +120,7 @@ color: rgb(92, 90, 90);
     gap: 20px;
 }
 .btn:hover{
-    transform: scale(1.1);
+    transform:scale(1.1);
 }
 img{
     transition: transform 1s ease;
