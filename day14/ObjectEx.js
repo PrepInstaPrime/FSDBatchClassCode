@@ -9,4 +9,7 @@ let mobile={
 // for in loop
 for ( let key in mobile){
     console.log(key +" : " +mobile[key]) // mobile."name"
+    mobile[key] = "mobile "+mobile[key]
+
 }
+console.log(mobile)
