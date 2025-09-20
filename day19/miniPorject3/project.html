@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb glow</title>
+</head>
+<body>
+    <img src="./off.png"  id="bulb" alt="bulb" height="300px" width="300px">
+    <button onclick="glow()">switch on</button>
+    <button onclick="off()">switch off</button>
+    <script>
+        let image=document.getElementById("bulb");
+        function glow(){
+            image.setAttribute("src","./on.png")
+        }
+        function off(){
+            image.setAttribute("src","./off.png")
+        }
+    </script>
+</body>
+</html>

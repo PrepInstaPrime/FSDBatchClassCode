@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading1" class="heading">hey this is h1</h1>
+    <h1 class="heading"> this is is heading 2</h1>
+    <h1 class="heading">this is heading 3</h1>
+    <p>hey this is para</p>
+    <div>
+        <p>hey</p>
+        <p>hello</p>
+        <p>Namaskara</p>
+    </div>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <!-- internal javaScript -->
+    <script>
+         let element= document.getElementsByTagName('p');
+        //  console.log(element[0].innerText)
+        //  console.log(element[1].innerText)
+        for(let ele of element){
+            console.log(ele.innerText)
+        }
+         let heading= document.getElementById("heading1")
+         console.log(heading.innerText)
+         let box= document.getElementsByClassName("box");
+        //  console.log(box)
+        for(let i=0;i<box.length;i++){
+            console.log(box[i].innerText)
+        }
+        let allHeading=document.getElementsByTagName("h1")
+        console.log(allHeading)
+    </script>
+</body>
+</html>
