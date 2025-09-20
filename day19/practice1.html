@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actor profiles</title>
+    <style>
+        .profile {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;;
+        }
+        .photo {
+            max-height: 300px;
+            width: 300px;
+            max-width: 500px;
+            border-radius: 50%;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Shah_Rukh_Khan_in_2023_%281%29.jpg" alt="Shah Rukh Khan" class="photo">
+        <h1 class="name">Shah Rukh Khan</h1>
+        <p class="age">Age: 57</p>
+        <p class="profession">Profession: Actor</p>
+        <p class="notable-works">Notable Works: Dilwale Dulhania Le Jayenge, My Name is Khan</p>
+    </div>
+    <button onclick="showProfile(0)">Akshay Kumar</button>
+    <button onclick="showProfile(1)">Salman Khan</button>
+    <button onclick="showProfile(2)">Shah Rukh Khan</button>
+    <button onclick="showProfile(3)">Ranveer Singh</button>
+    <button onclick="showProfile(4)">Hrithik Roshan</button>
+    <button onclick="showProfile(5)">John Abraham</button>
+    <button onclick="showProfile(6)">Varun Dhawan</button>
+    <button onclick="showProfile(7)">Ranbir Kapoor</button>
+    <button onclick="showProfile(8)">Ajay Devgn</button>
+    <button onclick="showProfile(9)">Vicky Kaushal</button>
+    <script>
+        let buttons=document.querySelectorAll("button")
+        let profile=document.querySelector(".profile")
+        let photo= document.querySelector(".photo")
+        let name=document.querySelector(".name")
+        let age=document.querySelector(".age")
+        let profession=document.querySelector(".profession")
+        let notableWorks=document.querySelector(".notable-works")
+
+        let actors=[
+            {
+                name:"Akshay Kumar",
+                age:56,
+                profession:"Actor",
+                notableWorks:"Hera Pheri, Kesari",
+                photo:"https://upload.wikimedia.org/wikipedia/commons/2/2a/Akshay_Kumar_National_Award_for_Padman_%28cropped%29.jpg"
+            },
+            {
+                name:"Salman Khan",
+                age:58,
+                profession:"Actor",
+                notableWorks:"Bajrangi Bhaijaan, Sultan",
+                photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Salmanrampwalk.png/250px-Salmanrampwalk.png"
+            },
+            {
+                name:"Shah Rukh Khan",
+                age:57,
+                profession:"Actor",
+                notableWorks:"Dilwale Dulhania Le Jayenge, My Name is Khan",
+                photo:"https://upload.wikimedia.org/wikipedia/commons/c/c1/Shah_Rukh_Khan_in_2023_%281%29.jpg"
+            },
+            {
+                name:"Ranveer Singh",
+                age:36,
+                profession:"Actor",
+                notableWorks:"Gully Boy, Bajirao Mastani",
+                photo:"https://upload.wikimedia.org/wikipedia/commons/4/4f/Ranveer_Singh_at_the_2020_Filmfare_Awards.jpg"
+            },
+            {
+                name:"Hrithik Roshan",
+                age:49,
+                profession:"Actor",
+                notableWorks:"Kaho Naa... Pyaar Hai, War",
+                photo:"hrithik_roshan.jpg"
+            },
+            {
+                name:"John Abraham",
+                age:50,
+                profession:"Actor",
+                notableWorks:"Dhoom, Batla House",
+                photo:"john_abraham.jpg"
+            },
+            {
+                name:"Varun Dhawan",
+                age:36,
+                profession:"Actor",
+                notableWorks:"Badlapur, Badrinath Ki Dulhania",
+                photo:"varun_dhawan.jpg"
+            },
+            {
+                name:"Ranbir Kapoor",
+                age:41,
+                profession:"Actor",
+                notableWorks:"Barfi!, Sanju",
+                photo:"ranbir_kapoor.jpg"
+            },
+            {
+                name:"Ajay Devgn",
+                age:54,
+                profession:"Actor",
+                notableWorks:"Singham, Tanhaji",
+                photo:"ajay_devgn.jpg"
+            },
+            {
+                name:"Vicky Kaushal",
+                age:35,
+                profession:"Actor",
+                notableWorks:"Uri: The Surgical Strike, Raazi",
+                photo:"vicky_kaushal.jpg"
+            }
+        ]
+        function showProfile(index){
+            let actor=actors[index]
+            photo.src=actor.photo
+            name.textContent=actor.name
+            age.textContent="Age: "+actor.age
+            profession.textContent="Profession: "+actor.profession
+            notableWorks.textContent="Notable Works: "+actor.notableWorks
+        }
+    </script>
+</body>
+</html>

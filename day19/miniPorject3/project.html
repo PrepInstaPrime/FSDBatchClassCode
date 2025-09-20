@@ -6,17 +6,37 @@
     <title>bulb glow</title>
 </head>
 <body>
-    <img src="./off.png"  id="bulb" alt="bulb" height="300px" width="300px">
-    <button onclick="glow()">switch on</button>
-    <button onclick="off()">switch off</button>
+    <img src="./off.png"  id="bulb" alt="bulb" height="300px" width="300px" onmouseover="glow()" onmouseout="off()">
+    <img src="" alt="goast" id="goast" height="300px" width="300px">
+    <!-- <button onclick="glow()">switch on</button>
+    <button onclick="off()">switch off</button> -->
+    <button onmouseover="glow()">switch on</button>
+    <button onmouseover="off()">switch off</button>
     <script>
         let image=document.getElementById("bulb");
+        let body=document.body;
+        let ghost=document.getElementById("goast");
         function glow(){
             image.setAttribute("src","./on.png")
+            ghost.setAttribute("src","")
         }
         function off(){
             image.setAttribute("src","./off.png")
+            ghost.style.width="600px"
+            ghost.style.height="600px"
+            ghost.setAttribute("src","./ghoast.gif")
+
         }
+        setInterval(()=>{
+            if(image.getAttribute("src")==="./off.png"){
+                glow()
+                body.style.backgroundColor="yellow"
+            }
+            else{
+                off()
+                body.style.backgroundColor="black"
+            }
+        },100)
     </script>
 </body>
 </html>
