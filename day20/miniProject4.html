@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: white;
+        }
+
+        .container {
+            width: 400px;
+            background: #060606;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            height: 520px;
+            width: 450px;
+        }
+
+        .inputBox {
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .inputBox input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            font-size: 30px;
+            padding: 0 20px;
+            background-color: #e56626;
+            border-radius: 10px 10px 0 0;
+            text-align: right;
+        }
+
+        .num {
+            width: 106px;
+            float: left;
+            text-align: center;
+            line-height: 80px;
+            font-size: 25px;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 10px;
+            margin: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .num:nth-child(4n) {
+            border-right: none;
+        }
+
+        .num:nth-last-child(-n+4) {
+            border-bottom: none;
+        }
+        .equal {
+            background: #e56626;
+        }
+
+        .num:hover {
+            background: #e56626;
+            transform: scale(0.95);
+            font-size: 29px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputBox">
+            <input type="text" name="" id="output" value="0">
+        </div>
+        <div class="buttons">
+            <div class="num">7</div>
+            <div class="num">8</div>
+            <div class="num">9</div>
+            <div class="num">/</div>
+            <div class="num">4</div>
+            <div class="num">5</div>
+            <div class="num">6</div>
+            <div class="num">%</div>
+            <div class="num">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <div class="num">*</div>
+            <div class="num">.</div>
+            <div class="num">0</div>
+            <div class="num">-</div>
+            <div class="num">+</div>
+            <div class="num">sqrt</div>
+            <div class="num">AC</div>
+            <div class="num">del</div>
+            <div class="num equal">=</div>
+        </div>
+    </div>
+    <script>
+        let buttons = document.querySelectorAll(".num");
+        let output = document.getElementById("output");
+        let string = "";
+        // console.log(buttons);
+        let arr = Array.from(buttons);
+        console.log(arr);
+        arr.forEach(button => {
+            button.addEventListener("click", (e) => {
+                if (e.target.innerHTML == "AC") {
+                    string = "";
+                    output.value = "0";
+                } else if (e.target.innerHTML == "del") {
+                    string = string.slice(0, -1);
+                    output.value = string;
+                } else if (e.target.innerHTML == "=") {
+                    try {
+                        string = eval(string);
+                        output.value = string;
+                    } catch {
+                        output.value = "Error";
+                    }
+                } else if (e.target.innerHTML == "sqrt") {
+                    try {
+                        string = Math.sqrt(eval(string));
+                        output.value = string;
+                    } catch {
+                        output.value = "Error";
+                    }
+                } else {
+                    if (string == "" && (e.target.innerHTML == "+" || e.target.innerHTML == "-" || e.target.innerHTML == "*" || e.target.innerHTML == "/" || e.target.innerHTML == "%" || e.target.innerHTML == ".")) {
+                        return;
+                    }
+                    string += e.target.innerHTML;
+                    output.value = string;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
