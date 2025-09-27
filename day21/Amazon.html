@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon.com: Online Shopping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/167688fc6a.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #EAEDED;
+        }
+
+        .navbar {
+            background: #131921;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            width: 120px;
+            margin-right: 20px;
+        }
+
+        .search-bar {
+            flex: 1;
+            display: flex;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 0px 0px 0px 0px;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            border: none;
+            background: #febd69;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            margin-left: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: url('https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/OPPO/JuneART23/D98335291_IN_WLME_OPPO_Reno11F_Launch_tallhero_3000x1200._CB556064899_.jpg') no-repeat center center/cover;
+            height: 350px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            width: 220px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            margin: 10px 0 5px 0;
+        }
+
+        .product-card p {
+            color: #B12704;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .footer {
+            background: #232F3E;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .address{
+            font-size: 12px;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        #productDropdown {
+            width: 50px;
+            border-radius: 5px 0px 0px 5px;
+        }
+.secondNav {
+            background: #232F3E;
+            padding: 8px 20px;
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+        }
+        .secondNav .nav-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+        .secondNav .nav-links a {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 3px;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        .secondNav .nav-links a:hover {
+            background: #37475A;
+        }
+        @media (max-width: 800px) {
+            .secondNav .nav-links {
+                gap: 10px;
+                font-size: 13px;
+            }
+        }
+        @media (max-width: 800px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="./image.png" alt="Amazon" class="logo">
+        <div class="address">
+            <span> <i class="fa-solid fa-location-dot"></i>Delivering to Bengaluru 562130</span>
+            <span>Update location</span>
+        </div>
+        <div class="search-bar">
+            <select name="" id="productDropdown">
+                <option value="all">All</option>
+                <option value="books">Books</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home & Kitchen</option>
+                <option value="toys">Toys & Games</option>
+                <option value="sports">Sports & Outdoors</option>
+                <option value="beauty">Beauty & Personal Care</option>
+                <option value="grocery">Grocery</option>
+                <option value="automotive">Automotive</option>
+                <option value="health">Health & Household</option>  
+                <option value="pet">Pet Supplies</option>
+                <option value="baby">Baby Products</option>
+                <option value="garden">Garden & Outdoor</option>
+                <option value="office">Office Products</option>
+                <option value="music">Music</option>
+                <option value="video">Video Games</option>
+                <option value="software">Software</option>
+                <option value="industrial">Industrial & Scientific</option>
+                <option value="handmade">Handmade</option>
+                <option value="luxury">Luxury Beauty</option>
+                <option value="prime">Amazon Prime</option>
+                <option value="fashion">Clothing, Shoes & Jewelry</option>
+                <option value="appliances">Appliances</option>
+                <option value="computers">Computers & Accessories</option>
+                <option value="cellphones">Cell Phones & Accessories</option>
+                <option value="camera">Camera & Photo</option>
+                <option value="movies">Movies & TV</option>
+                <option value="giftcards">Gift Cards</option>
+                <option value="travel">Travel</option>
+                <option value="services">Amazon Services</option>
+                <option value="more">See All</option>
+            </select>
+            <input type="text" placeholder="Search Amazon">
+            <button>🔍</button>
+            <select name="" id="langWithFlag">
+                <option value="en">🇺🇸 EN </option>
+                <option value="hi">🇮🇳 HI </option>
+                <option value="es">🇪🇸 ES </option>
+                <option value="fr">🇫🇷 FR </option>
+                <option value="de">🇩🇪 DE </option>
+                <option value="it">🇮🇹 IT </option>
+                <option value="ja">🇯🇵 JA </option>
+                <option value="zh">🇨🇳 ZH </option>
+                <option value="ar">🇸🇦 AR </option>
+                <option value="ru">🇷🇺 RU </option>
+            </select>
+        </div>
+        <div class="nav-links">
+            <a href="#">Sign In</a>
+            <a href="#">Returns & Orders</a>
+            <a href="#">Cart 🛒</a>
+        </div>
+    </div>
+    <div class="secondNav">
+        <div class="nav-links">
+            <a href="#">Today's Deals</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Registry</a>
+            <a href="#">Sell</a>
+            <a href="#">Amazon Pay</a>
+            <a href="#">Buy Again</a>
+            <a href="#">Health & Personal Care</a>
+            <a href="#">Books</a>
+            <a href="#">Fashion</a>
+            <a href="#">Electronics</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Toys & Games</a>
+            <a href="#">Sports & Outdoors</a>
+            <a href="#">Automotive</a>
+            <a href="#">Computers</a>
+        </div>
+    </div>
+    </div>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Amazon</h1>
+            <p>Shop millions of products at unbeatable prices!</p>
+        </div>
+    </div>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/71K7Q4P9gKL._AC_UL320_.jpg" alt="Headphones">
+            <h3>Wireless Headphones</h3>
+            <p>₹2,499</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/81vpsIs58WL._AC_UL320_.jpg" alt="Smartphone">
+            <h3>Smartphone</h3>
+            <p>₹14,999</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/61MblgP4uDL._AC_UL320_.jpg" alt="Wrist Watch">
+            <h3>Wrist Watch</h3>
+            <p>₹1,299</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/71c5lQGkA0L._AC_UL320_.jpg" alt="Shoes">
+            <h3>Running Shoes</h3>
+            <p>₹2,199</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Amazon.com, Inc. or its affiliates
+    </div>
+</body>
+
+</html>

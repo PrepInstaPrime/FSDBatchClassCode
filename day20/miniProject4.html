@@ -117,7 +117,7 @@
         let string = "";
         // console.log(buttons);
         let arr = Array.from(buttons);
-        console.log(arr);
+        // console.log(arr);
         arr.forEach(button => {
             button.addEventListener("click", (e) => {
                 if (e.target.innerHTML == "AC") {
@@ -141,11 +141,14 @@
                         output.value = "Error";
                     }
                 } else {
+                    
                     if (string == "" && (e.target.innerHTML == "+" || e.target.innerHTML == "-" || e.target.innerHTML == "*" || e.target.innerHTML == "/" || e.target.innerHTML == "%" || e.target.innerHTML == ".")) {
                         return;
                     }
                     string += e.target.innerHTML;
                     output.value = string;
+                    console.log("you are in equation part");
+                    console.log("button: " + e.target.innerHTML + " and Current String: "   + string);
                 }
             });
         });
