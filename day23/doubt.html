@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para" >hey this is para 1</p>
+    <script>
+        let element= document.getElementById("para");
+        element.addEventListener("click",()=>{
+            element.innerText="hey i am changed"
+            element.style.color="red"
+        })
+
+    </script>
+</body>
+</html>
