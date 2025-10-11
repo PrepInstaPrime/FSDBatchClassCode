@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onclick="changeContent()" id="para1">hey this is para 1</p>
+    <p id="para2"> hey this is para 2</p>
+    <script>
+        let para1= document.getElementById('para1')
+        function changeContent(){
+            para1.innerText="hey i am changed"
+        }
+        let para2= document.getElementById("para2")
+        para2.addEventListener("mouseout",()=>{
+            para2.innerText="hey i am changed by event listner"
+        })
+        
+    </script>
+</body>
+</html>
