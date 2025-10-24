@@ -4,9 +4,9 @@ function maxWindow(arr, target){
     let maxWin=0;
     for(let right=0;right<arr.length;right++){
         sum+= arr[right];
-        while(sum>target){
-            sum-=arr[left];
-            left++;
+        while(sum>target){ // 9>5 // 7>5
+            sum-=arr[left]; // sum=9-4=5 
+            left++; // left=1 // left =2
         }
         if(sum==target){
             let newWindow=right-left+1;

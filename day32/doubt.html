@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p class="para1">para1 graph to demonstrate text</p>
+        <p class="para2">para2 graph to demonstrate text</p>
+        <p class="para3">para3 graph to demonstrate text</p>
+        <h1 id="heading">hey this is heading</h1>
+        <div>
+            <p>
+                <h3>hey i am nested</h3>
+            </p>
+        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg" alt="" width="100px" height="100px">
+    </div>
+    <hr>
+    <div id="data1">
+
+    </div>
+    <hr>
+    <div id="data2">
+
+    </div>
+    <hr>
+    <div id="data3">
+
+    </div>
+    <script>
+        let divBox= document.getElementById("box")
+        let divData1= document.getElementById("data1")
+        let divData2= document.getElementById("data2")
+        let divData3= document.getElementById("data3")
+        console.log(divBox.innerHTML)
+        console.log(divBox.innerText)
+        console.log(divBox.textContent)
+        divData1.innerHTML=divBox.innerHTML
+        divData2.innerHTML=divBox.innerText
+        divData3.innerHTML=divBox.textContent
+    </script>
+</body>
+</html>
