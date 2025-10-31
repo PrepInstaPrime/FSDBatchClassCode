@@ -9,6 +9,11 @@ class LinkedList{
     constructor(){
         this.head=null;
     }
+    prepend(data){
+        let node= new Node(data);
+        node.next=this.head;
+        this.head=node;
+    }
     append(data){
         let node= new Node(data);
         if(this.head==null){
@@ -23,6 +28,10 @@ class LinkedList{
     }
     addAtPosition(position, data){
         let node= new Node(data);
+        if(position<=1){
+            this.prepend(data);
+            return;
+        }
         let count=1;
         let temp=this.head;
         while(temp!=null&&count<position-1){
@@ -67,7 +76,10 @@ list.append(1)
 list.append(2)
 list.addAtPosition(2,3)
 list.append(4)
+list.prepend(0)
 // console.log(list)
+list.addAtPosition(0,5)
+list.addAtPosition(2,6)
 list.display()
 list.delete(3)
 list.display()
