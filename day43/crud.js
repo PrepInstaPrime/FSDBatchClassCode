@@ -64,20 +64,16 @@ class BinaryTree {
         return false;
     }
     delete(val) {
-       
         if (this.root == null) {
             console.log("tree is empty")
             return false;
         }
-        
         if (this.root.left == null && this.root.right == null) {
             if (this.root.val == val) {
                 this.root = null;
                 return true;
             }
         }
-        console.log("root" + this.root.val)
-       
         let queue = []
         queue.push(this.root);
         let keyNode = null;
@@ -129,10 +125,10 @@ class BinaryTree {
 }
 let tree = new BinaryTree();
 tree.insert(1);
-// tree.insert(2);
-// tree.insert(3);
-// tree.insert(4);
-// tree.insert(5);
+tree.insert(2);
+tree.insert(3);
+tree.insert(4);
+tree.insert(5);
 // tree.inorder(tree.root);
 // tree.update(1,6)
 // tree.delete(2)
