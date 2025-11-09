@@ -1,5 +1,5 @@
 # Question
-``` https://leetcode.com/problems/invert-binary-tree/description/ ```
+- https://leetcode.com/problems/invert-binary-tree/description/ 
 ## Solution: 
 ```
 /**
