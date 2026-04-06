@@ -117,6 +117,7 @@ tree.levelOrderInsertion(6);
 // tree.bfs()
 // tree.preOrder(tree.root);
 // tree.postOrder(tree.root)
+
 tree.inOrder(tree.root)
 console.log("Height: "+tree.height(tree.root))
 console.log("diameter: "+tree.diameter(tree.root))
