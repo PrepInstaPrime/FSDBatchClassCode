@@ -51,4 +51,8 @@ tree.insert(3);
 tree.insert(4);
 tree.insert(6);
 console.log(tree)
+let arr=[1,2,3,4,5,6];
+for(let val of arr){
+    tree.insert(val);
+}
 tree.inOrder(tree.root);
